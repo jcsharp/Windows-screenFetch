@@ -11,7 +11,6 @@ Function Get-SystemSpecifications()
     $Shell = Get-Shell;
     $Resolution = Get-Resolution;
     $WM = Get-WM;
-    $Font = Get-Font;
     $CPU = Get-CPU;
     $GPU = Get-GPU;
     $RAM = Get-RAM;
@@ -27,7 +26,6 @@ Function Get-SystemSpecifications()
         $Shell,
         $Resolution,
         $WM,
-        $Font,
         $CPU,
         $GPU,
         $RAM;
@@ -51,10 +49,9 @@ Function Get-LineToTitleMappings()
         5 = "Shell: ";
         6 = "Resolution: ";
         7 = "Window Manager: ";
-        8 = "Font: ";
-        9 = "CPU: ";
-        10 = "GPU ";
-        11 = "RAM: ";
+        8 = "CPU: ";
+        9 = "GPU ";
+        10 = "RAM: ";
     };
 
     return $TitleMappings;
@@ -107,12 +104,6 @@ Function Get-Resolution()
 Function Get-WM() 
 {
     return "DWM";
-}
-
-# THIS USUALLY WILL OUTPUT INCORRECT RESULTS. STATICALLY SETTING THIS VALUE IS NO BUENO. NEED TO REMOVE BUT WANT TO GET THIS RELEASED FIRST.
-Function Get-Font() 
-{
-    return "Segoe UI";
 }
 
 
